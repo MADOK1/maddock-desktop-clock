@@ -1,0 +1,111 @@
+[gd_scene load_steps=6 format=3 uid="uid://bgu885ia1cmxy"]
+
+[ext_resource type="Script" uid="uid://d0cxvteu7aoda" path="res://clock.gd" id="1_c2meu"]
+[ext_resource type="Texture2D" uid="uid://bgyi0gycq02lt" path="res://clock.png" id="1_venu5"]
+[ext_resource type="Texture2D" uid="uid://bcb4ca77ht6ox" path="res://Image.png" id="2_kig64"]
+[ext_resource type="Texture2D" uid="uid://cdpg2hqyx6ww7" path="res://HourHand.png" id="3_4n1wf"]
+[ext_resource type="Texture2D" uid="uid://iuqkbwg8xxh4" path="res://MinuteHand.png" id="4_cqx04"]
+
+[node name="Clock" type="Control" node_paths=PackedStringArray("HourHand", "MinuteHand")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_c2meu")
+HourHand = NodePath("HourHand")
+MinuteHand = NodePath("MinuteHand")
+metadata/_edit_use_anchors_ = true
+
+[node name="Clock" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("1_venu5")
+metadata/_edit_use_anchors_ = true
+
+[node name="Point1" type="Node2D" parent="Clock"]
+position = Vector2(500, 115)
+
+[node name="Point2" type="Node2D" parent="Clock"]
+position = Vector2(568, 157)
+
+[node name="Point3" type="Node2D" parent="Clock"]
+position = Vector2(574, 244)
+
+[node name="Point4" type="Node2D" parent="Clock"]
+position = Vector2(538, 328)
+
+[node name="Point5" type="Node2D" parent="Clock"]
+position = Vector2(465, 375)
+
+[node name="Point6" type="Node2D" parent="Clock"]
+position = Vector2(319, 416)
+
+[node name="Point7" type="Node2D" parent="Clock"]
+position = Vector2(202, 369)
+
+[node name="Point8" type="Node2D" parent="Clock"]
+position = Vector2(122, 330)
+
+[node name="Point9" type="Node2D" parent="Clock"]
+position = Vector2(76, 241)
+
+[node name="Point10" type="Node2D" parent="Clock"]
+position = Vector2(119, 155)
+
+[node name="Point11" type="Node2D" parent="Clock"]
+position = Vector2(233, 115)
+
+[node name="Point12" type="Node2D" parent="Clock"]
+position = Vector2(353, 71)
+
+[node name="Body" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 52.505
+offset_right = 39.0
+offset_bottom = 148.505
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1, 0.78)
+texture = ExtResource("2_kig64")
+
+[node name="HourHand" type="Node2D" parent="."]
+position = Vector2(281, 189)
+
+[node name="HourHand" type="TextureRect" parent="HourHand"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -170.0
+offset_top = -170.0
+offset_right = 263.0
+offset_bottom = 406.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = 3.1415927
+pivot_offset = Vector2(170, 170)
+texture = ExtResource("3_4n1wf")
+
+[node name="MinuteHand" type="Node2D" parent="."]
+position = Vector2(385, 186)
+
+[node name="MinuteHand" type="TextureRect" parent="MinuteHand"]
+offset_left = -252.0
+offset_top = -167.0
+offset_right = 181.0
+offset_bottom = 409.0
+rotation = -1.5707964
+pivot_offset = Vector2(250, 170)
+texture = ExtResource("4_cqx04")
